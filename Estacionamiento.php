@@ -46,7 +46,15 @@ function __construct($nombre)
 
 	public function MostrarTabla()
 	{
-		echo "<table><tr><td>patente</td>";
+		$TablaCompleta=" <table border=1><th> patente </th><th> Ingreso</th>";
+		$renglon="";
+		
+		foreach ($lista as $auto) 
+		{
+			$renglon= $renglon."<tr> <td> ".$auto[0]." </td> <td> ".$auto[1]."</td> </tr>" ; 
+		
+  		}
+		$TablaCompleta =$TablaCompleta.$renglon." </table>";
 	}
 
 
